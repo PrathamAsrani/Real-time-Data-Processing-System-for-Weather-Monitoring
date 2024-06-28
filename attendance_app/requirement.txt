@@ -11,8 +11,8 @@ idna==2.10
 imageio==2.9.0
 imageio-ffmpeg==0.4.2
 moviepy==1.0.3
-numpy
-opencv-python==4.4.0.46
+numpy==1.19.5
+opencv-python==4.5.3.56
 Pillow==8.0.1
 proglog==0.1.9
 requests==2.24.0
