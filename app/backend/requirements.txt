@@ -1,0 +1,6 @@
+psycopg2
+dotenv
+FastApi
+uvicorn
+pydantic
+db
