@@ -1,5 +1,0 @@
--- Libraries are stated in requirement.txt
--- Sources
-    1. https://pypi.org/project/face-recognition/
-
-to utilize face-recognition library of python, we need Dlib, please checkout: https://github.com/davisking/dlib
