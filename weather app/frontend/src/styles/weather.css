@@ -1,0 +1,261 @@
+.weather-container {
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-4.0.3&q=80&w=1920') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* Ensures it covers the full viewport height */
+}
+
+h1 {
+    font-size: 4vw; /* Responsive font size based on viewport width */
+    margin-bottom: 2rem;
+}
+
+.label,
+.threshold-container {
+    margin: 2rem 0;
+}
+
+.threshold-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive styling for the select element */
+#unit-select {
+    margin-left: 1vw;
+    font-size: 1.5rem;
+    padding: .5rem;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+.threshold-container input {
+    padding: 1rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 20vw; /* Responsive width */
+}
+
+.threshold-container button {
+    padding: 1rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 15vw; /* Responsive width */
+    min-width: 8rem; /* Ensures button doesn’t get too small */
+}
+
+.threshold-container button:hover {
+    background-color: #0056b3;
+}
+
+.weather-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.weather-card {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.5rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.8rem;
+    background-color: #f5f5f5;
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    width: 25vw; /* Responsive width based on viewport */
+    min-width: 18rem; /* Minimum width */
+    max-width: 30vw; /* Maximum width */
+    height: auto; /* Let height adjust dynamically based on content */
+    max-height: 60vh; /* Limit the height of the card */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    transition: transform 0.2s;
+    scrollbar-width: none; /* Firefox: Hide scrollbar */
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.weather-card::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+.weather-card:hover {
+    transform: translateY(-0.5rem);
+}
+
+.weather-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.weather-card p {
+    margin: 0.3rem 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.view_forecast_btn {
+    align-self: flex-start;
+    margin-top: 1rem;
+    padding: 0.8rem 1.4rem;
+    color: #007bff;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%; /* Button takes full width of the card */
+    max-width: 10rem; /* Limit the button width */
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.view_forecast_btn:hover {
+    background-color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .weather-card {
+        width: 90vw; /* Full width for smaller screens */
+        max-width: 100%; /* Ensure it takes full width on small screens */
+        margin: 1rem 0;
+    }
+
+    h2 {
+        font-size: 1.4rem; /* Adjust heading size for smaller screens */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .weather-card {
+        width: 90vw; /* Full width for smaller screens */
+        max-width: 100%; /* Ensure it takes full width on small screens */
+        margin: 1rem 0;
+    }
+
+    h2 {
+        font-size: 1.4rem; /* Adjust heading size for smaller screens */
+    }
+
+    p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .weather-card {
+        width: 90vw; /* Full width for smaller screens */
+        margin: 1rem 0;
+    }
+
+    h1 {
+        font-size: 6vw; /* Adjust heading size for smaller screens */
+    }
+
+    .threshold-container input {
+        width: 60vw; /* Adjust input field width */
+    }
+
+    .threshold-container button {
+        width: 30vw; /* Adjust button width */
+    }
+
+    #unit-select {
+        font-size: 1.2rem; /* Adjust font size for mobile */
+    }
+}
+
+.unit-label {
+    font-size: 1.65rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(5px);
+    color: black;
+}
+
+/* Forecast Container Styling */
+.forecast-container {
+    background: rgba(0, 0, 0, 0.7); /* Transparent background */
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Forecast Grid Styling */
+.forecast-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+/* Individual Forecast Item Styling */
+.forecast-item {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    flex-basis: calc(33% - 2rem);
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-item p {
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .forecast-item {
+        flex-basis: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .forecast-item {
+        flex-basis: calc(100% - 1rem);
+    }
+}
+
+
+/* Canvas container styling */
+.chart-container {
+    width: 100%;
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Responsive canvas for chart */
+.chart-container canvas {
+    display: block;
+    width: 100% !important; /* Ensure the chart takes full width */
+    height: auto !important; /* Adjust height automatically */
+}
