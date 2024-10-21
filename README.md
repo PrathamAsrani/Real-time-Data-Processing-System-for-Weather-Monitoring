@@ -1,5 +1,7 @@
 # 🌤️ Real-Time Weather Monitoring System with Rollups and Aggregates
 
+## Working video: https://drive.google.com/file/d/1WtaagSks6eLlB5785TEdJuQCAIcLvRa5/view
+
 This project is a **Real-Time Weather Monitoring System** built using **PostgreSQL**, **FastAPI**, and **React.js**. It tracks and displays live weather data for current locations and major metro cities, offering features such as temperature conversion, data visualization, and alert thresholds. The system processes real-time data efficiently, offering weather summaries and insights to users.
 
 ## 💻 Tech Stack
